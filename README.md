@@ -12,8 +12,8 @@ conda env update -f environment.yaml
 ### Demo Using Pretrained Model
 1. Sample generation
 ```
-wget https://zenodo.org/record/7322135/files/mtr.tar.gz
-tar -zxvf mtr.tar.gz 
+wget https://zenodo.org/record/00000/files/mvd.tar.gz
+tar -zxvf mvd.tar.gz 
 ```
 
 Please refer to [notebook/demo.ipynb](https://github.com/youngjuene/microvar/notebook/demo.ipynb) for [FSD50k](https://github.com/youngjuene/microvar/notebook/samples) subsets. Below is the code instruction.
