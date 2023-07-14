@@ -1,0 +1,18 @@
+name: microvar
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - pip:
+      - librosa==0.8.1
+      - numpy==1.23.5
+      - pandas==2.0.0
+      - pyyaml==6.0
+      - resampy==0.4.2
+      - scikit-learn==1.2.2
+      - scipy==1.10.1
+      - soundfile==0.12.1
+      - torch==2.0.0
+      - torchaudio==2.0.1
+      - tqdm==4.65.0
