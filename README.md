@@ -16,24 +16,24 @@ python segment_audio.py --audio_dir {directory of original dataset}
 python preprocess.py --audio_dir {directory with segmented audio files} --sep {separation options}
 ```
 
-4. Train the model on different sources
+3. Train the model on custom datasets
+Run the train.py script to train the model. Replace {model name} with the desired name for your model, and {directory with preprocessed audio files} with the path to the preprocessed audio files.
 ```
 python train.py --model_dir {model name} --data_dirs {directory with preprocessed audio files}
 ```
 
-5. Generate samples using the model checkpoints
+4. Generate samples using the model checkpoints
+Run the generate.py script to generate samples using the trained model. Replace {model name} with the name of directory where your trained model is located, {input audio} with the name of the input audio file and {output audio filename} with the desired name for the output audio file.
 ```
-python generate.py --model_dir {model name} --input 63.wav --save_dir {dir to save output}
+python generate.py --ckpt_dir {ckpt dir} --wav_input {input audio} --wav_output {output audio filename}
 ```
 
 ### Demo Using Pretrained Model
-1. Download Pretrained Models
+1. Download Pretrained Models (WIP)
 ```
 wget https://zenodo.org/record/00000/files/mvd.tar.gz
 tar -zxvf mvd.tar.gz 
 ```
-
-Please refer to [notebook/demo.ipynb](https://github.com/youngjuene/microvar/notebook/demo.ipynb) for [FSD50k](https://github.com/youngjuene/microvar/notebook/samples) subsets. Below is the code instruction.
 
 2. Application with Max/MSP and Unreal Engine
 <br> Download the files [Link](https://github.com/youngjune/microvar)
