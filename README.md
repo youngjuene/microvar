@@ -17,13 +17,15 @@ python preprocess.py --audio_dir {directory with segmented audio files} --sep {s
 ```
 
 3. Train the model on custom datasets
-Run the train.py script to train the model. Replace {model name} with the desired name for your model, and {directory with preprocessed audio files} with the path to the preprocessed audio files.
+Run the train.py script to train the model.
+<br> Replace {model name} with the desired name for your model, and {directory with preprocessed audio files} with the path to the preprocessed audio files.
 ```
 python train.py --model_dir {model name} --data_dirs {directory with preprocessed audio files}
 ```
 
 4. Generate samples using the model checkpoints
-Run the generate.py script to generate samples using the trained model. Replace {model name} with the name of directory where your trained model is located, {input audio} with the name of the input audio file and {output audio filename} with the desired name for the output audio file.
+Run the generate.py script to generate samples using the trained model.
+<br> Replace {model name} with the name of directory where your trained model is located, {input audio} with the name of the input audio file and {output audio filename} with the desired name for the output audio file.
 ```
 python generate.py --ckpt_dir {ckpt dir} -i {input audio} -o {output audio filename}
 ```
