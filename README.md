@@ -25,18 +25,22 @@ python train.py --model_dir {model name} --data_dirs {directory with preprocesse
 4. Generate samples using the model checkpoints
 Run the generate.py script to generate samples using the trained model. Replace {model name} with the name of directory where your trained model is located, {input audio} with the name of the input audio file and {output audio filename} with the desired name for the output audio file.
 ```
-python generate.py --ckpt_dir {ckpt dir} --wav_input {input audio} --wav_output {output audio filename}
+python generate.py --ckpt_dir {ckpt dir} -i {input audio} -o {output audio filename}
 ```
 
-### Demo Using Pretrained Model
-1. Download Pretrained Models (WIP)
+### Demo Using Pretrained Models
+1. Download model checkpoints (WIP)
 ```
 wget https://zenodo.org/record/00000/files/mvd.tar.gz
 tar -zxvf mvd.tar.gz 
 ```
+2. Run generate.py by specifying the pretrained checkpoint
+```
+python generate.py --ckpt_path {pretrained ckpt} -i {input audio} -o {output audio filename}
+```
 
-2. Application with Max/MSP and Unreal Engine
-<br> Download the files [Link](https://github.com/youngjune/microvar)
+3. Try out other examples on Max/MSP and Unreal Engine
+<br> Download the project files [Link](https://github.com/youngjune/microvar)
 
 
 ### License
@@ -47,8 +51,8 @@ Please consider citing our paper in your publications if the project helps your 
 ```
 @article{micro2023liu,
   title={Micro-variation of Sound Objects Using Component Separation and Diffusion Models},
-  author={},
-  journal={International Computer Music Conference},
+  author={a, b, c},
+  proceedings={International Computer Music Conference},
   year={2023}
 }
 ```
