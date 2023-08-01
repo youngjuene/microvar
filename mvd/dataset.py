@@ -14,14 +14,14 @@ class ConditionalDataset(torch.utils.data.Dataset):
     super().__init__()
     self.filenames = []
     for path in paths:
-      self.filenames += glob(f'{path}/**/*.wav', recursive=True)
+      self.filenames += glob(f'{path}/*.wav', recursive=True)
 
   def __len__(self):
     return len(self.filenames)
 
   def __getitem__(self, idx):
     audio_filename = self.filenames[idx]
-    spec_filename = f'{audio_filename}.spec.npy'
+    spec_filename = audio_filename.replace('.wav', '.npy')
     signal, _ = torchaudio.load(audio_filename)
     spectrogram = np.load(spec_filename)
     return {
@@ -35,14 +35,14 @@ class UnconditionalDataset(torch.utils.data.Dataset):
     super().__init__()
     self.filenames = []
     for path in paths:
-      self.filenames += glob(f'{path}/**/*.wav', recursive=True)
+      self.filenames += glob(f'{path}/*.wav', recursive=True)
 
   def __len__(self):
     return len(self.filenames)
 
   def __getitem__(self, idx):
     audio_filename = self.filenames[idx]
-    spec_filename = f'{audio_filename}.spec.npy'
+    spec_filename = audio_filename.replace('.wav', '.npy')
     signal, _ = torchaudio.load(audio_filename)
     return {
         'audio': signal[0],

@@ -16,3 +16,5 @@ dependencies:
       - torch==2.0.0
       - torchaudio==2.0.1
       - tqdm==4.65.0
+      - tensorboad==2.12.1
+      - pillow==10.0.0
