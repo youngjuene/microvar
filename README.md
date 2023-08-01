@@ -57,6 +57,10 @@ Please consider citing our paper in your publications if the project helps your 
 }
 ```
 
+### TODO
+- [ ] Check volume issue
+- [ ] Upload downloadable project files
+- [ ] ...
 
 ### Reference
 [DiffWave: A Versatile Diffusion Model for Audio Synthesis](https://github.com/lmnt-com/diffwave)
