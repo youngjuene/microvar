@@ -18,3 +18,4 @@ dependencies:
       - tqdm==4.65.0
       - tensorboad==2.12.1
       - pillow==10.0.0
+      - python-osc-1.8.1
